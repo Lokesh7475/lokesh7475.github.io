@@ -1,11 +1,297 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <title>My Site</title>
-    </head>
 
-    <body>
-        <h1>This is my github pages website</h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokesh Chaurasia | Software Engineer</title>
+    <meta name="description"
+        content="Portfolio of Lokesh Chaurasia, a Software Engineering undergraduate specializing in scalable backend systems, microservices, and competitive programming.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Set theme before page load to prevent flashing
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+</head>
+
+<body>
+    <canvas id="particles-canvas"></canvas>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LC<span>.</span></a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                </ul>
+                <button id="theme-toggle" class="btn-icon theme-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="greeting">Hi, I'm</span>
+                <h1 class="name">Lokesh Chaurasia</h1>
+                <h2 class="title">Software Engineer & Backend Specialist</h2>
+                <p class="summary">
+                    CS undergraduate with a strong foundation in scalable backend systems, microservices, and
+                    object-oriented programming. Experienced in building high-throughput architectures, secure REST
+                    APIs, and event-driven applications across multiple languages.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="https://github.com/Lokesh7475" target="_blank" class="btn btn-icon" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/lokesh-chaurasia-a96387311/" target="_blank"
+                        class="btn btn-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://leetcode.com/u/Lokesh_7475/" target="_blank" class="btn btn-icon"
+                        aria-label="LeetCode"><i class="fas fa-code"></i></a>
+                    <a href="https://codolio.com/profile/Lokesh_7475" target="_blank" class="btn btn-icon"
+                        aria-label="Codolio"><i class="fas fa-laptop-code"></i></a>
+                </div>
+            </div>
+            <div class="hero-visuals">
+                <div class="floating-card stat-card leetcode-card">
+                    <i class="fas fa-fire" style="color: #ffa116;"></i>
+                    <div class="stat-info">
+                        <h4>1,518</h4>
+                        <span>LeetCode Rating</span>
+                    </div>
+                </div>
+                <div class="floating-card stat-card codolio-card">
+                    <i class="fas fa-network-wired" style="color: #00d2ff;"></i>
+                    <div class="stat-info">
+                        <h4>Microservices</h4>
+                        <span>CQRS & Event-Driven</span>
+                    </div>
+                </div>
+                <div class="floating-card stat-card problems-card">
+                    <i class="fas fa-laptop-code" style="color: #e44d26;"></i>
+                    <div class="stat-info">
+                        <h4>900+</h4>
+                        <span>DSA Problems Solved</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-content">
+                <div class="glass-card education-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Sep 2023 – Sep 2027</div>
+                        <h4 class="timeline-title">B.E. in Computer Science Technology</h4>
+                        <p class="timeline-subtitle">LJ University</p>
+                        <p class="timeline-detail">SPI: 8.88/10</p>
+                    </div>
+                </div>
+                <div class="glass-card journey-card">
+                    <h3><i class="fas fa-rocket"></i> My Journey</h3>
+                    <p>I am a driven Software Engineering student continuously pushing the boundaries of my technical
+                        capabilities. I thrive in challenging environments, consistently aiming to build robust,
+                        high-throughput backends and distributed systems. With over 900 DSA problems solved, I
+                        specialize in rapid iteration and complex algorithmic problem-solving.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills-section">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <div class="line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="glass-card skill-category">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-tags">
+                        <span>Java</span>
+                        <span>C#</span>
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                    </div>
+                </div>
+                <div class="glass-card skill-category">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                    <div class="skill-tags">
+                        <span>Spring Boot</span>
+                        <span>.NET</span>
+                        <span>Angular</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>FastAPI</span>
+                    </div>
+                </div>
+                <div class="glass-card skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-tags">
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>MySQL</span>
+                        <span>Redis</span>
+                        <span>PostGIS</span>
+                    </div>
+                </div>
+                <div class="glass-card skill-category cs-fundamentals">
+                    <h3><i class="fas fa-network-wired"></i> Architecture & Tools</h3>
+                    <div class="skill-tags">
+                        <span>Apache Kafka</span>
+                        <span>RabbitMQ</span>
+                        <span>WebSockets</span>
+                        <span>Microservices</span>
+                        <span>CQRS</span>
+                        <span>Git & Postman</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects-section">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="glass-card project-card">
+                    <div class="project-header">
+                        <i class="fas fa-truck-fast folder-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/Lokesh7475/Vantage-Fleet" target="_blank" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Vantage Fleet Tracker</h3>
+                    <p class="project-desc">Architected a scalable, event-driven microservices backend utilizing CQRS to
+                        process 500 telemetry data points per second. Engineered a live Angular dashboard via WebSockets
+                        and Redis.</p>
+                    <ul class="project-tech">
+                        <li>.NET 7</li>
+                        <li>Angular</li>
+                        <li>Kafka</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="glass-card project-card">
+                    <div class="project-header">
+                        <i class="fas fa-wallet folder-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/Lokesh7475/ExpenseTracker-Backend" target="_blank"
+                                aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Expense Tracker API</h3>
+                    <p class="project-desc">Designed a secure backend managing 15 RESTful API endpoints. Optimized
+                        backend speed using Redis for caching and RabbitMQ for asynchronous workflows, improving query
+                        response times by 85%.</p>
+                    <ul class="project-tech">
+                        <li>Spring Boot</li>
+                        <li>PostgreSQL</li>
+                        <li>RabbitMQ</li>
+                        <li>Redis</li>
+                    </ul>
+                </div>
+                <div class="glass-card project-card">
+                    <div class="project-header">
+                        <i class="fas fa-robot folder-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/joy-1225/GDG_Hackathon" target="_blank" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">FaultFix AI System</h3>
+                    <p class="project-desc">Engineered an autonomous debugging system utilizing LLMs. Designed a
+                        multi-agent workflow to detect bugs, generate fixes, and validate outputs across controlled
+                        iteration cycles.</p>
+                    <ul class="project-tech">
+                        <li>Python</li>
+                        <li>FastAPI</li>
+                        <li>Gemini</li>
+                        <li>WebSockets</li>
+                    </ul>
+                </div>
+                <div class="glass-card project-card">
+                    <div class="project-header">
+                        <i class="fas fa-tshirt folder-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/Lokesh7475/ODOO_2025" target="_blank" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">ReWear Marketplace</h3>
+                    <p class="project-desc">Backend for an item marketplace built under strict 8-hour hackathon
+                        constraints. Features robust REST APIs for item listings and integrated JWT authentication.</p>
+                    <ul class="project-tech">
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section achievements-section">
+            <div class="section-header">
+                <h2>Achievements</h2>
+                <div class="line"></div>
+            </div>
+            <div class="achievements-list">
+                <div class="glass-card achievement-item">
+                    <i class="fas fa-trophy highlight-icon"></i>
+                    <div class="achieve-text">
+                        <h4>900+ DSA Problems Solved</h4>
+                        <p>Demonstrated advanced analytical, optimization, and logical reasoning skills by conquering
+                            over 900 Data Structures and Algorithms problems across LeetCode and Codeforces.</p>
+                    </div>
+                </div>
+                <div class="glass-card achievement-item">
+                    <i class="fas fa-users-gear highlight-icon"></i>
+                    <div class="achieve-text">
+                        <h4>Hackathon Competitor</h4>
+                        <p>Collaborated in fast-paced environments to rapidly architect, prototype, and deploy full
+                            backend systems under strict 8-hour and 24-hour constraints.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <h3>Lokesh Chaurasia</h3>
+                <p>Building scalable backend systems and solving complex algorithms.</p>
+                <div class="footer-socials">
+                    <a href="mailto:lokesh@example.com" title="Email me"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/Lokesh7475" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/lokesh-chaurasia-a96387311/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="copyright">&copy; 2026 Lokesh Chaurasia. Designed and built with &hearts;.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
